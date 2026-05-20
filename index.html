@@ -330,18 +330,51 @@
     /* ── RESPONSIVE ──────────────────────────────────── */
     @media (max-width: 1000px) {
       .main { grid-template-columns: 1fr; }
-      .panel-left { border-right: none; border-bottom: 1px solid var(--border); }
+      .panel-left { border-right: none; border-bottom: 1px solid var(--border); min-width: 0; }
+      .panel-right { min-width: 0; }
     }
 
     @media (max-width: 780px) {
       .instructions { grid-template-columns: 1fr 1fr; }
     }
 
+    /* Tabla compacta en móvil */
+    @media (max-width: 680px) {
+      .panel-left, .panel-right { padding: 14px 12px; }
+
+      thead th {
+        font-size: 9px;
+        padding: 7px 3px;
+        letter-spacing: 0;
+      }
+
+      td { padding: 2px 3px; }
+
+      .td-num { width: 20px; font-size: 10px; padding-right: 3px; }
+      .td-crit { min-width: 0; }
+      .td-auto, .td-cole, .td-atle { width: 56px; }
+      .td-del { width: 26px; }
+
+      input.label-input {
+        font-size: 11px;
+        padding: 5px 5px;
+      }
+
+      input.score-input {
+        width: 48px;
+        font-size: 13px;
+        padding: 5px 2px;
+      }
+
+      .btn { font-size: 12px; padding: 7px 12px; }
+      .birdbox-wordmark { font-size: 11px; letter-spacing: 5px; }
+    }
+
     @media (max-width: 520px) {
       .instructions { grid-template-columns: 1fr; }
-      .app-header { padding: 14px 16px; }
-      .app-title { font-size: 18px; }
-      .panel-left, .panel-right { padding: 16px; }
+      .app-header { padding: 12px 14px; }
+      .app-title { font-size: 16px; }
+      .birdbox-logo svg { width: 40px; height: 30px; }
     }
   </style>
 </head>
