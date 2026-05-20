@@ -58,25 +58,37 @@ body {
 
 .app-title .accent { color: var(--blue); }
 
-.birdbox-logo {
+.berkana-logo {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  gap: 3px;
+  gap: 0;
   text-decoration: none;
+  flex-shrink: 0;
 }
 
-.birdbox-logo svg {
-  width: 52px;
-  height: 38px;
-  fill: var(--text);
-}
-
-.birdbox-wordmark {
+.berkana-name {
   font-family: 'Bebas Neue', sans-serif;
-  font-size: 13px;
-  letter-spacing: 7px;
-  color: var(--muted);
+  font-size: 28px;
+  color: var(--text);
+  letter-spacing: 1px;
+  line-height: 1;
+}
+
+.berkana-b {
+  border: 2.5px solid var(--text);
+  width: 30px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 3px;
+  flex-shrink: 0;
+}
+
+.berkana-b svg {
+  width: 16px;
+  height: 33px;
+  fill: var(--text);
 }
 
 /* ── INSTRUCTIONS ────────────────────────────────── */
@@ -353,12 +365,14 @@ input.score-atle:focus { border-color: var(--grey); }
   }
 
   .btn { font-size: 12px; padding: 7px 12px; }
-  .birdbox-wordmark { font-size: 11px; letter-spacing: 5px; }
+  .berkana-name { font-size: 20px; }
+  .berkana-b { width: 22px; height: 30px; margin: 0 2px; }
+  .berkana-b svg { width: 12px; height: 24px; }
 }
 
 @media (max-width: 520px) {
   .instructions { grid-template-columns: 1fr; }
   .app-header { padding: 12px 14px; }
   .app-title { font-size: 16px; }
-  .birdbox-logo svg { width: 40px; height: 30px; }
+  .berkana-name { font-size: 17px; }
 }
